@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -525,7 +525,7 @@
 
 <h1 id="sql-basics-recon">SQL basics &amp; recon</h1>
 <h2 id="get-the-script">Get the script</h2>
-<p><a class="md-button md-button--primary" download href="../assets/sql_basics_and_recon.sql"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span> Download sql_basics_and_recon.sql</a></p>
+<p><a class="md-button md-button--primary" download="download" href="../assets/sql_basics_and_recon.sql"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span> Download sql_basics_and_recon.sql</a></p>
 <p><strong>Or</strong> copy it from the box below (copy button, top-right of the box).</p>
 <h2 id="open-it-in-snowsight">Open it in Snowsight</h2>
 <ol>
@@ -553,13 +553,13 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="cm">   Cmd/Ctrl + Enter).</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cm">   Style: dbt conventions. Lowercase keywords and names, one column per</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cm">   line, trailing commas, explicit "as" aliases, descriptive table aliases.</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cm">   (Snowflake isn't case sensitive, so lowercase and UPPERCASE run the same.)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cm">   line, trailing commas, explicit &quot;as&quot; aliases, descriptive table aliases.</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cm">   (Snowflake isn&#39;t case sensitive, so lowercase and UPPERCASE run the same.)</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cm">   CoCo prompts: after each query there's a "CoCo prompt" box. Each phrase in</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="cm">   CoCo prompts: after each query there&#39;s a &quot;CoCo prompt&quot; box. Each phrase in</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="cm">   the prompt maps to a part of the SQL, shown as [from], [select], [where]...</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="cm">   A good prompt names: the table, the columns, the filters, the grouping,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="cm">   the sort and the row limit. The same things you'd write in SQL.</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="cm">   the sort and the row limit. The same things you&#39;d write in SQL.</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="cm">============================================================================= */</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1">-- Setup: who am I, what compute am I using, where is the data</span>
@@ -569,25 +569,25 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="cm">/* -----------------------------------------------------------------------------</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="cm">   1. select *  : "show me the data"</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="cm">   1. select *  : &quot;show me the data&quot;</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="cm">   Excel: opening the sheet and scrolling the first few rows.</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="cm">   - *      = every column</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="cm">   - limit  = only return the first N rows (good habit on big tables)</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="cm">----------------------------------------------------------------------------- */</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1">-- Notice: date_received is a real date, but month ('2026-01 Jan') is just a</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1">-- text label. Use date_received for any date logic; text won't sort or</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1">-- Notice: date_received is a real date, but month (&#39;2026-01 Jan&#39;) is just a</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1">-- text label. Use date_received for any date logic; text won&#39;t sort or</span>
 <a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c1">-- compare like a date.</span>
 <a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="k">from</span><span class="w"> </span><span class="n">test_loan_application</span>
 <a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="k">limit</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
 <a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="cm">   "From test_loan_application [from], show all columns [select *]</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="cm">    for the first 10 rows [limit]."</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="cm">   Tip: name the table exactly. "Show me the loan data" makes CoCo guess.</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="cm">   &quot;From test_loan_application [from], show all columns [select *]</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="cm">    for the first 10 rows [limit].&quot;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="cm">   Tip: name the table exactly. &quot;Show me the loan data&quot; makes CoCo guess.</span>
 <a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="c1">-- Notice: application_id is in both tables. That's how we'll link them later.</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="c1">-- Notice: application_id is in both tables. That&#39;s how we&#39;ll link them later.</span>
 <a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="c1">-- Notice: booked_date is also a real date, so we can compare it with</span>
 <a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="c1">-- date_received from the applications table.</span>
 <a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span>
@@ -595,18 +595,18 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="k">limit</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
 <a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="cm">   "From test_loan_account [from], show all columns [select *]</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="cm">   &quot;From test_loan_account [from], show all columns [select *]</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="cm">    for the first 10 rows [limit]. Which columns does it share with</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="cm">    test_loan_application?"</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="cm">    test_loan_application?&quot;</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="cm">   Tip: asking what the tables have in common gets CoCo to find the join key.</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>
 <a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>
 <a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="cm">/* -----------------------------------------------------------------------------</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="cm">   2. Named columns + where + order by  : "filter and sort"</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="cm">   2. Named columns + where + order by  : &quot;filter and sort&quot;</span>
 <a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="cm">   Excel: hide columns, use the filter dropdown, sort largest to smallest.</span>
 <a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="cm">   - List only the columns you need</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="cm">   - where keeps rows that meet the condition (text goes in 'single quotes')</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="cm">   - where keeps rows that meet the condition (text goes in &#39;single quotes&#39;)</span>
 <a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="cm">   - and means both conditions must be true</span>
 <a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="cm">   - order by ... desc sorts largest first</span>
 <a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="cm">----------------------------------------------------------------------------- */</span>
@@ -618,26 +618,26 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">    </span><span class="n">status</span>
 <a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="k">from</span><span class="w"> </span><span class="n">test_loan_application</span>
 <a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="k">where</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Approved'</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">    </span><span class="k">and</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Personal Loan'</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">    </span><span class="k">and</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Personal Loan&#39;</span>
 <a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">loan_amount</span><span class="w"> </span><span class="k">desc</span>
 <a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="k">limit</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
 <a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="c1">-- Expected: top row LA-2026-0059 at $4,850,000. A $4.85M personal loan?</span>
 <a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="c1">-- Everything else tops out near $50k. Remember this one for the recon.</span>
 <a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
 <a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="cm">   "From test_loan_application [from], show application_id, product,</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="cm">   &quot;From test_loan_application [from], show application_id, product,</span>
 <a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a><span class="cm">    channel, loan_amount and status [select], only for applications where</span>
-<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="cm">    status is 'Approved' and product is 'Personal Loan' [where],</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="cm">    status is &#39;Approved&#39; and product is &#39;Personal Loan&#39; [where],</span>
 <a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="cm">    sorted by loan_amount largest first [order by desc],</span>
-<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a><span class="cm">    top 5 only [limit]."</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="cm">   Tip: give exact filter values in quotes. "Approved personal loans" may</span>
-<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="cm">   work, but 'Approved' and 'Personal Loan' leave nothing to guess.</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a><span class="cm">    top 5 only [limit].&quot;</span>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="cm">   Tip: give exact filter values in quotes. &quot;Approved personal loans&quot; may</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="cm">   work, but &#39;Approved&#39; and &#39;Personal Loan&#39; leave nothing to guess.</span>
 <a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>
 <a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
 <a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="cm">/* -----------------------------------------------------------------------------</span>
-<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="cm">   3. group by + aggregations  : "summarise"</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="cm">   3. group by + aggregations  : &quot;summarise&quot;</span>
 <a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a><span class="cm">   Excel: a pivot table.</span>
 <a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a><span class="cm">   - count(*) counts rows, sum adds up, avg averages, round tidies decimals</span>
 <a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="cm">   - as gives a column a friendly name (an alias)</span>
@@ -649,32 +649,32 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a><span class="w">    </span><span class="k">sum</span><span class="p">(</span><span class="n">loan_amount</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">total_amount</span><span class="p">,</span>
 <a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a><span class="w">    </span><span class="n">round</span><span class="p">(</span><span class="k">avg</span><span class="p">(</span><span class="n">processing_days</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">avg_processing_days</span>
 <a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a><span class="k">from</span><span class="w"> </span><span class="n">test_loan_application</span>
-<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a><span class="k">where</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Approved'</span>
+<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a><span class="k">where</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span>
 <a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">product</span>
 <a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">total_amount</span><span class="w"> </span><span class="k">desc</span><span class="p">;</span>
 <a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a><span class="c1">-- Expected: 4 rows. Personal Loan 99, Vehicle Loan 74, Property Lending 51,</span>
 <a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a><span class="c1">-- Business Loan 42. Look at the Personal Loan total ($6.4M): one $4.85M</span>
-<a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a><span class="c1">-- "personal loan" (LA-2026-0059) is almost certainly a keying error. Totals</span>
+<a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a><span class="c1">-- &quot;personal loan&quot; (LA-2026-0059) is almost certainly a keying error. Totals</span>
 <a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a><span class="c1">-- hide this; max(loan_amount) or sorting by loan_amount finds it.</span>
 <a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a><span class="c1">-- Total approved = 266. Keep that number in mind for the joins.</span>
 <a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>
 <a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a><span class="cm">   "From test_loan_application [from], for applications where status is</span>
-<a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a><span class="cm">    'Approved' [where], show for each product [group by] the number of</span>
+<a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a><span class="cm">   &quot;From test_loan_application [from], for applications where status is</span>
+<a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a><span class="cm">    &#39;Approved&#39; [where], show for each product [group by] the number of</span>
 <a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a><span class="cm">    applications, total loan_amount and average processing_days rounded to</span>
 <a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a><span class="cm">    1 decimal [select + aggregates], sorted by total amount largest first</span>
-<a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a><span class="cm">    [order by]."</span>
-<a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a><span class="cm">   Tip: "for each X" or "by X" = group by. Say which calculation you want</span>
-<a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a><span class="cm">   (count, total, average). "Summarise by product" leaves CoCo to choose.</span>
-<a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a><span class="cm">   Follow-up to try: "Are there any loan amounts that look unusual for their product?"</span>
-<a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a><span class="cm">   Another: "Group by channel. Do any channel values look wrong?" (4 rows</span>
+<a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a><span class="cm">    [order by].&quot;</span>
+<a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a><span class="cm">   Tip: &quot;for each X&quot; or &quot;by X&quot; = group by. Say which calculation you want</span>
+<a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a><span class="cm">   (count, total, average). &quot;Summarise by product&quot; leaves CoCo to choose.</span>
+<a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a><span class="cm">   Follow-up to try: &quot;Are there any loan amounts that look unusual for their product?&quot;</span>
+<a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a><span class="cm">   Another: &quot;Group by channel. Do any channel values look wrong?&quot; (4 rows</span>
 <a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a><span class="cm">   have product or channel names in the wrong column, e.g. channel =</span>
-<a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a><span class="cm">   'Business Loan'. A real data-entry issue in the source file.)</span>
+<a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a><span class="cm">   &#39;Business Loan&#39;. A real data-entry issue in the source file.)</span>
 <a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>
 <a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>
 <a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a><span class="cm">/* -----------------------------------------------------------------------------</span>
-<a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a><span class="cm">   4. inner join  : "match the two systems"</span>
+<a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a><span class="cm">   4. inner join  : &quot;match the two systems&quot;</span>
 <a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a><span class="cm">   Excel: XLOOKUP the application ID into the loan sheet, then keep ONLY the</span>
 <a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a><span class="cm">   rows that found a match.</span>
 <a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a><span class="cm">   - applications and accounts are aliases (short names) for the two tables</span>
@@ -689,27 +689,27 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a><span class="k">from</span><span class="w"> </span><span class="n">test_loan_application</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">applications</span>
 <a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a><span class="k">inner</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">test_loan_account</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">accounts</span>
 <a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a><span class="w">    </span><span class="k">on</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">application_id</span>
-<a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a><span class="k">where</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Approved'</span><span class="p">;</span>
+<a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a><span class="k">where</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span><span class="p">;</span>
 <a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a><span class="c1">-- Expected: 253 rows (not 266!). An inner join SILENTLY DROPS approved</span>
 <a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a><span class="c1">-- applications that have no booked loan. They just vanish from the report.</span>
 <a id="__codelineno-0-152" name="__codelineno-0-152" href="#__codelineno-0-152"></a>
 <a id="__codelineno-0-153" name="__codelineno-0-153" href="#__codelineno-0-153"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a><span class="cm">   "Join test_loan_application to test_loan_account [from + join] on</span>
+<a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a><span class="cm">   &quot;Join test_loan_application to test_loan_account [from + join] on</span>
 <a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a><span class="cm">    application_id [on], using an inner join so only matching rows are</span>
 <a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a><span class="cm">    kept [inner join]. Only include applications where status is</span>
-<a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a><span class="cm">    'Approved' [where]. Show the number of matched rows, total application</span>
-<a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a><span class="cm">    loan_amount and total booked loan_amount [select + aggregates]."</span>
-<a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a><span class="cm">   Tip: always say the join key AND the join type. If you don't, CoCo picks</span>
+<a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a><span class="cm">    &#39;Approved&#39; [where]. Show the number of matched rows, total application</span>
+<a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a><span class="cm">    loan_amount and total booked loan_amount [select + aggregates].&quot;</span>
+<a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a><span class="cm">   Tip: always say the join key AND the join type. If you don&#39;t, CoCo picks</span>
 <a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a><span class="cm">   one, and as this step shows, the join type changes the answer.</span>
 <a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a>
 <a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>
 <a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a><span class="cm">/* -----------------------------------------------------------------------------</span>
-<a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a><span class="cm">   5. left join  : "what's missing?"</span>
+<a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a><span class="cm">   5. left join  : &quot;what&#39;s missing?&quot;</span>
 <a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a><span class="cm">   Excel: XLOOKUP, then filter for #N/A.</span>
 <a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a><span class="cm">   - left join keeps EVERY row from the left (first) table</span>
-<a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a><span class="cm">   - Where there's no match, the right-hand columns come back as null</span>
-<a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a><span class="cm">     (SQL's version of #N/A)</span>
+<a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a><span class="cm">   - Where there&#39;s no match, the right-hand columns come back as null</span>
+<a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a><span class="cm">     (SQL&#39;s version of #N/A)</span>
 <a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a><span class="cm">   - count(*) counts all rows; count(column) skips nulls</span>
 <a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a><span class="cm">----------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a><span class="k">select</span>
@@ -719,22 +719,22 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-176" name="__codelineno-0-176" href="#__codelineno-0-176"></a><span class="k">from</span><span class="w"> </span><span class="n">test_loan_application</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">applications</span>
 <a id="__codelineno-0-177" name="__codelineno-0-177" href="#__codelineno-0-177"></a><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">test_loan_account</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">accounts</span>
 <a id="__codelineno-0-178" name="__codelineno-0-178" href="#__codelineno-0-178"></a><span class="w">    </span><span class="k">on</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">application_id</span>
-<a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a><span class="k">where</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Approved'</span><span class="p">;</span>
+<a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a><span class="k">where</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span><span class="p">;</span>
 <a id="__codelineno-0-180" name="__codelineno-0-180" href="#__codelineno-0-180"></a><span class="c1">-- Expected: 266 approved, 253 booked, 13 not booked.</span>
 <a id="__codelineno-0-181" name="__codelineno-0-181" href="#__codelineno-0-181"></a><span class="c1">-- Same tables, same filter. Changing inner to left kept every approved row.</span>
 <a id="__codelineno-0-182" name="__codelineno-0-182" href="#__codelineno-0-182"></a><span class="c1">-- The join type changes the answer.</span>
 <a id="__codelineno-0-183" name="__codelineno-0-183" href="#__codelineno-0-183"></a>
 <a id="__codelineno-0-184" name="__codelineno-0-184" href="#__codelineno-0-184"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a><span class="cm">   "Left join test_loan_application to test_loan_account [from + left join]</span>
+<a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a><span class="cm">   &quot;Left join test_loan_application to test_loan_account [from + left join]</span>
 <a id="__codelineno-0-186" name="__codelineno-0-186" href="#__codelineno-0-186"></a><span class="cm">    on application_id [on], keeping every application even if it has no</span>
-<a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a><span class="cm">    booked loan. Only include applications where status is 'Approved'</span>
+<a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a><span class="cm">    booked loan. Only include applications where status is &#39;Approved&#39;</span>
 <a id="__codelineno-0-188" name="__codelineno-0-188" href="#__codelineno-0-188"></a><span class="cm">    [where]. Show the total approved rows, how many have a booked loan, and</span>
-<a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a><span class="cm">    how many don't [select + count]."</span>
-<a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a><span class="cm">   Tip: "keeping every row from X even if there's no match" is plain-English</span>
+<a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a><span class="cm">    how many don&#39;t [select + count].&quot;</span>
+<a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a><span class="cm">   Tip: &quot;keeping every row from X even if there&#39;s no match&quot; is plain-English</span>
 <a id="__codelineno-0-191" name="__codelineno-0-191" href="#__codelineno-0-191"></a><span class="cm">   for left join. Useful if you forget the SQL term.</span>
 <a id="__codelineno-0-192" name="__codelineno-0-192" href="#__codelineno-0-192"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-193" name="__codelineno-0-193" href="#__codelineno-0-193"></a>
-<a id="__codelineno-0-194" name="__codelineno-0-194" href="#__codelineno-0-194"></a><span class="c1">-- List the 13: "is null" finds the rows where no loan matched</span>
+<a id="__codelineno-0-194" name="__codelineno-0-194" href="#__codelineno-0-194"></a><span class="c1">-- List the 13: &quot;is null&quot; finds the rows where no loan matched</span>
 <a id="__codelineno-0-195" name="__codelineno-0-195" href="#__codelineno-0-195"></a><span class="k">select</span>
 <a id="__codelineno-0-196" name="__codelineno-0-196" href="#__codelineno-0-196"></a><span class="w">    </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="p">,</span>
 <a id="__codelineno-0-197" name="__codelineno-0-197" href="#__codelineno-0-197"></a><span class="w">    </span><span class="n">applications</span><span class="p">.</span><span class="n">product</span><span class="p">,</span>
@@ -745,16 +745,16 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-202" name="__codelineno-0-202" href="#__codelineno-0-202"></a><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">test_loan_account</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">accounts</span>
 <a id="__codelineno-0-203" name="__codelineno-0-203" href="#__codelineno-0-203"></a><span class="w">    </span><span class="k">on</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">application_id</span>
 <a id="__codelineno-0-204" name="__codelineno-0-204" href="#__codelineno-0-204"></a><span class="k">where</span>
-<a id="__codelineno-0-205" name="__codelineno-0-205" href="#__codelineno-0-205"></a><span class="w">    </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Approved'</span>
+<a id="__codelineno-0-205" name="__codelineno-0-205" href="#__codelineno-0-205"></a><span class="w">    </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span>
 <a id="__codelineno-0-206" name="__codelineno-0-206" href="#__codelineno-0-206"></a><span class="w">    </span><span class="k">and</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">loan_account_id</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">null</span><span class="p">;</span>
 <a id="__codelineno-0-207" name="__codelineno-0-207" href="#__codelineno-0-207"></a>
 <a id="__codelineno-0-208" name="__codelineno-0-208" href="#__codelineno-0-208"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a><span class="cm">   "Using the same left join, list [select] application_id, product,</span>
+<a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a><span class="cm">   &quot;Using the same left join, list [select] application_id, product,</span>
 <a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a><span class="cm">    loan_amount, date_received and loan_account_id for approved</span>
 <a id="__codelineno-0-211" name="__codelineno-0-211" href="#__codelineno-0-211"></a><span class="cm">    applications [where] that have no matching row in test_loan_account</span>
-<a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a><span class="cm">    [where ... is null]."</span>
-<a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a><span class="cm">   Tip: "have no matching row" = is null after a left join. Building on the</span>
-<a id="__codelineno-0-214" name="__codelineno-0-214" href="#__codelineno-0-214"></a><span class="cm">   previous prompt ("using the same...") keeps CoCo consistent.</span>
+<a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a><span class="cm">    [where ... is null].&quot;</span>
+<a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a><span class="cm">   Tip: &quot;have no matching row&quot; = is null after a left join. Building on the</span>
+<a id="__codelineno-0-214" name="__codelineno-0-214" href="#__codelineno-0-214"></a><span class="cm">   previous prompt (&quot;using the same...&quot;) keeps CoCo consistent.</span>
 <a id="__codelineno-0-215" name="__codelineno-0-215" href="#__codelineno-0-215"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-216" name="__codelineno-0-216" href="#__codelineno-0-216"></a>
 <a id="__codelineno-0-217" name="__codelineno-0-217" href="#__codelineno-0-217"></a>
@@ -763,8 +763,8 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-220" name="__codelineno-0-220" href="#__codelineno-0-220"></a><span class="cm">   6a builds it step by step, 6b shows the same logic saved as a view,</span>
 <a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a><span class="cm">   6c summarises it.</span>
 <a id="__codelineno-0-222" name="__codelineno-0-222" href="#__codelineno-0-222"></a>
-<a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a><span class="cm">   Question: "Does every approved application have a matching booked loan,</span>
-<a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a><span class="cm">              for the right amount, in the right month?"</span>
+<a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a><span class="cm">   Question: &quot;Does every approved application have a matching booked loan,</span>
+<a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a><span class="cm">              for the right amount, in the right month?&quot;</span>
 <a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a>
 <a id="__codelineno-0-226" name="__codelineno-0-226" href="#__codelineno-0-226"></a><span class="cm">   Structure (the dbt pattern): import CTEs -&gt; logic CTEs -&gt; final select.</span>
 <a id="__codelineno-0-227" name="__codelineno-0-227" href="#__codelineno-0-227"></a><span class="cm">   Each CTE is one step, like a separate tab in an Excel recon workbook.</span>
@@ -774,8 +774,8 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-231" name="__codelineno-0-231" href="#__codelineno-0-231"></a><span class="cm">   - full outer join : match BOTH ways, so we also catch loans booked</span>
 <a id="__codelineno-0-232" name="__codelineno-0-232" href="#__codelineno-0-232"></a><span class="cm">                       with no approved application</span>
 <a id="__codelineno-0-233" name="__codelineno-0-233" href="#__codelineno-0-233"></a><span class="cm">   - coalesce      : take the first non-null value</span>
-<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a><span class="cm">   - date_trunc('month', ...)   : compare dates by month</span>
-<a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a><span class="cm">   - case when     : SQL's nested IF. First true condition wins, so order matters</span>
+<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a><span class="cm">   - date_trunc(&#39;month&#39;, ...)   : compare dates by month</span>
+<a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a><span class="cm">   - case when     : SQL&#39;s nested IF. First true condition wins, so order matters</span>
 <a id="__codelineno-0-236" name="__codelineno-0-236" href="#__codelineno-0-236"></a>
 <a id="__codelineno-0-237" name="__codelineno-0-237" href="#__codelineno-0-237"></a><span class="cm">   Expected: 274 records (one per transaction), which summarise to:</span>
 <a id="__codelineno-0-238" name="__codelineno-0-238" href="#__codelineno-0-238"></a><span class="cm">     Matched                          230</span>
@@ -827,27 +827,27 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-284" name="__codelineno-0-284" href="#__codelineno-0-284"></a><span class="w">        </span><span class="n">accounts</span><span class="p">.</span><span class="n">booked_date</span><span class="p">,</span>
 <a id="__codelineno-0-285" name="__codelineno-0-285" href="#__codelineno-0-285"></a><span class="w">        </span><span class="k">case</span>
 <a id="__codelineno-0-286" name="__codelineno-0-286" href="#__codelineno-0-286"></a><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">loan_account_id</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">null</span>
-<a id="__codelineno-0-287" name="__codelineno-0-287" href="#__codelineno-0-287"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">'Approved, not booked'</span>
-<a id="__codelineno-0-288" name="__codelineno-0-288" href="#__codelineno-0-288"></a><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">'Approved'</span>
-<a id="__codelineno-0-289" name="__codelineno-0-289" href="#__codelineno-0-289"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">'Booked, no approved application'</span>
+<a id="__codelineno-0-287" name="__codelineno-0-287" href="#__codelineno-0-287"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;Approved, not booked&#39;</span>
+<a id="__codelineno-0-288" name="__codelineno-0-288" href="#__codelineno-0-288"></a><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">null</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span>
+<a id="__codelineno-0-289" name="__codelineno-0-289" href="#__codelineno-0-289"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;Booked, no approved application&#39;</span>
 <a id="__codelineno-0-290" name="__codelineno-0-290" href="#__codelineno-0-290"></a><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">loan_amount</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">loan_amount</span>
-<a id="__codelineno-0-291" name="__codelineno-0-291" href="#__codelineno-0-291"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">'Amount mismatch'</span>
-<a id="__codelineno-0-292" name="__codelineno-0-292" href="#__codelineno-0-292"></a><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">date_trunc</span><span class="p">(</span><span class="s1">'month'</span><span class="p">,</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">date_received</span><span class="p">)</span>
-<a id="__codelineno-0-293" name="__codelineno-0-293" href="#__codelineno-0-293"></a><span class="w">                </span><span class="o">!=</span><span class="w"> </span><span class="n">date_trunc</span><span class="p">(</span><span class="s1">'month'</span><span class="p">,</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">booked_date</span><span class="p">)</span>
-<a id="__codelineno-0-294" name="__codelineno-0-294" href="#__codelineno-0-294"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">'Timing difference'</span>
-<a id="__codelineno-0-295" name="__codelineno-0-295" href="#__codelineno-0-295"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="s1">'Matched'</span>
+<a id="__codelineno-0-291" name="__codelineno-0-291" href="#__codelineno-0-291"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;Amount mismatch&#39;</span>
+<a id="__codelineno-0-292" name="__codelineno-0-292" href="#__codelineno-0-292"></a><span class="w">            </span><span class="k">when</span><span class="w"> </span><span class="n">date_trunc</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">date_received</span><span class="p">)</span>
+<a id="__codelineno-0-293" name="__codelineno-0-293" href="#__codelineno-0-293"></a><span class="w">                </span><span class="o">!=</span><span class="w"> </span><span class="n">date_trunc</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">booked_date</span><span class="p">)</span>
+<a id="__codelineno-0-294" name="__codelineno-0-294" href="#__codelineno-0-294"></a><span class="w">                </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;Timing difference&#39;</span>
+<a id="__codelineno-0-295" name="__codelineno-0-295" href="#__codelineno-0-295"></a><span class="w">            </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;Matched&#39;</span>
 <a id="__codelineno-0-296" name="__codelineno-0-296" href="#__codelineno-0-296"></a><span class="w">        </span><span class="k">end</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">recon_result</span>
 <a id="__codelineno-0-297" name="__codelineno-0-297" href="#__codelineno-0-297"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">applications</span>
 <a id="__codelineno-0-298" name="__codelineno-0-298" href="#__codelineno-0-298"></a><span class="w">    </span><span class="k">full</span><span class="w"> </span><span class="k">outer</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">accounts</span>
 <a id="__codelineno-0-299" name="__codelineno-0-299" href="#__codelineno-0-299"></a><span class="w">        </span><span class="k">on</span><span class="w"> </span><span class="n">applications</span><span class="p">.</span><span class="n">application_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">application_id</span>
 <a id="__codelineno-0-300" name="__codelineno-0-300" href="#__codelineno-0-300"></a><span class="w">    </span><span class="c1">-- Declined, withdrawn or pending applications that were never booked are out of scope</span>
 <a id="__codelineno-0-301" name="__codelineno-0-301" href="#__codelineno-0-301"></a><span class="w">    </span><span class="k">where</span>
-<a id="__codelineno-0-302" name="__codelineno-0-302" href="#__codelineno-0-302"></a><span class="w">        </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Approved'</span>
+<a id="__codelineno-0-302" name="__codelineno-0-302" href="#__codelineno-0-302"></a><span class="w">        </span><span class="n">applications</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Approved&#39;</span>
 <a id="__codelineno-0-303" name="__codelineno-0-303" href="#__codelineno-0-303"></a><span class="w">        </span><span class="k">or</span><span class="w"> </span><span class="n">accounts</span><span class="p">.</span><span class="n">loan_account_id</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">null</span>
 <a id="__codelineno-0-304" name="__codelineno-0-304" href="#__codelineno-0-304"></a>
 <a id="__codelineno-0-305" name="__codelineno-0-305" href="#__codelineno-0-305"></a><span class="p">),</span>
 <a id="__codelineno-0-306" name="__codelineno-0-306" href="#__codelineno-0-306"></a>
-<a id="__codelineno-0-307" name="__codelineno-0-307" href="#__codelineno-0-307"></a><span class="c1">-- Final: one row per record, exceptions first (the recon "worksheet")</span>
+<a id="__codelineno-0-307" name="__codelineno-0-307" href="#__codelineno-0-307"></a><span class="c1">-- Final: one row per record, exceptions first (the recon &quot;worksheet&quot;)</span>
 <a id="__codelineno-0-308" name="__codelineno-0-308" href="#__codelineno-0-308"></a><span class="k">final</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="p">(</span>
 <a id="__codelineno-0-309" name="__codelineno-0-309" href="#__codelineno-0-309"></a>
 <a id="__codelineno-0-310" name="__codelineno-0-310" href="#__codelineno-0-310"></a><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="o">*</span>
@@ -857,27 +857,27 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-314" name="__codelineno-0-314" href="#__codelineno-0-314"></a>
 <a id="__codelineno-0-315" name="__codelineno-0-315" href="#__codelineno-0-315"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">final</span>
 <a id="__codelineno-0-316" name="__codelineno-0-316" href="#__codelineno-0-316"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span>
-<a id="__codelineno-0-317" name="__codelineno-0-317" href="#__codelineno-0-317"></a><span class="w">    </span><span class="n">recon_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Matched'</span><span class="p">,</span><span class="w">   </span><span class="c1">-- false sorts first, so exceptions come first</span>
+<a id="__codelineno-0-317" name="__codelineno-0-317" href="#__codelineno-0-317"></a><span class="w">    </span><span class="n">recon_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Matched&#39;</span><span class="p">,</span><span class="w">   </span><span class="c1">-- false sorts first, so exceptions come first</span>
 <a id="__codelineno-0-318" name="__codelineno-0-318" href="#__codelineno-0-318"></a><span class="w">    </span><span class="n">recon_result</span><span class="p">,</span>
 <a id="__codelineno-0-319" name="__codelineno-0-319" href="#__codelineno-0-319"></a><span class="w">    </span><span class="n">application_id</span><span class="p">;</span>
 <a id="__codelineno-0-320" name="__codelineno-0-320" href="#__codelineno-0-320"></a>
 <a id="__codelineno-0-321" name="__codelineno-0-321" href="#__codelineno-0-321"></a><span class="c1">-- Expected: 274 rows (266 approved applications + 8 loans booked without</span>
-<a id="__codelineno-0-322" name="__codelineno-0-322" href="#__codelineno-0-322"></a><span class="c1">-- an approved application). Each row says which bucket it's in and why.</span>
+<a id="__codelineno-0-322" name="__codelineno-0-322" href="#__codelineno-0-322"></a><span class="c1">-- an approved application). Each row says which bucket it&#39;s in and why.</span>
 <a id="__codelineno-0-323" name="__codelineno-0-323" href="#__codelineno-0-323"></a><span class="c1">--</span>
 <a id="__codelineno-0-324" name="__codelineno-0-324" href="#__codelineno-0-324"></a><span class="c1">-- Things to point out:</span>
-<a id="__codelineno-0-325" name="__codelineno-0-325" href="#__codelineno-0-325"></a><span class="c1">--   - The $4.85M "personal loan" from query 2 is in 'Amount mismatch':</span>
+<a id="__codelineno-0-325" name="__codelineno-0-325" href="#__codelineno-0-325"></a><span class="c1">--   - The $4.85M &quot;personal loan&quot; from query 2 is in &#39;Amount mismatch&#39;:</span>
 <a id="__codelineno-0-326" name="__codelineno-0-326" href="#__codelineno-0-326"></a><span class="c1">--     it was booked as $48,500. A keying error, caught automatically.</span>
-<a id="__codelineno-0-327" name="__codelineno-0-327" href="#__codelineno-0-327"></a><span class="c1">--   - 'Approved, not booked' rows have no loan_account_id: nothing was booked.</span>
-<a id="__codelineno-0-328" name="__codelineno-0-328" href="#__codelineno-0-328"></a><span class="c1">--   - 'Booked, no approved application' is the one audit cares about:</span>
+<a id="__codelineno-0-327" name="__codelineno-0-327" href="#__codelineno-0-327"></a><span class="c1">--   - &#39;Approved, not booked&#39; rows have no loan_account_id: nothing was booked.</span>
+<a id="__codelineno-0-328" name="__codelineno-0-328" href="#__codelineno-0-328"></a><span class="c1">--   - &#39;Booked, no approved application&#39; is the one audit cares about:</span>
 <a id="__codelineno-0-329" name="__codelineno-0-329" href="#__codelineno-0-329"></a><span class="c1">--     money went out with no approval trail. 3 were booked while the</span>
 <a id="__codelineno-0-330" name="__codelineno-0-330" href="#__codelineno-0-330"></a><span class="c1">--     application was still Pending, 1 was Declined, and 4 point at an</span>
-<a id="__codelineno-0-331" name="__codelineno-0-331" href="#__codelineno-0-331"></a><span class="c1">--     application_id that doesn't exist at all.</span>
-<a id="__codelineno-0-332" name="__codelineno-0-332" href="#__codelineno-0-332"></a><span class="c1">--   - Written once, this re-runs on next month's data in seconds.</span>
+<a id="__codelineno-0-331" name="__codelineno-0-331" href="#__codelineno-0-331"></a><span class="c1">--     application_id that doesn&#39;t exist at all.</span>
+<a id="__codelineno-0-332" name="__codelineno-0-332" href="#__codelineno-0-332"></a><span class="c1">--   - Written once, this re-runs on next month&#39;s data in seconds.</span>
 <a id="__codelineno-0-333" name="__codelineno-0-333" href="#__codelineno-0-333"></a>
 <a id="__codelineno-0-334" name="__codelineno-0-334" href="#__codelineno-0-334"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
 <a id="__codelineno-0-335" name="__codelineno-0-335" href="#__codelineno-0-335"></a><span class="cm">   Structure the prompt in the same steps as the CTEs above:</span>
 <a id="__codelineno-0-336" name="__codelineno-0-336" href="#__codelineno-0-336"></a>
-<a id="__codelineno-0-337" name="__codelineno-0-337" href="#__codelineno-0-337"></a><span class="cm">   "Reconcile approved loan applications against booked loans.</span>
+<a id="__codelineno-0-337" name="__codelineno-0-337" href="#__codelineno-0-337"></a><span class="cm">   &quot;Reconcile approved loan applications against booked loans.</span>
 <a id="__codelineno-0-338" name="__codelineno-0-338" href="#__codelineno-0-338"></a><span class="cm">    Step 1 [applications CTE]: from test_loan_application, take the</span>
 <a id="__codelineno-0-339" name="__codelineno-0-339" href="#__codelineno-0-339"></a><span class="cm">      applications and standardise product casing.</span>
 <a id="__codelineno-0-340" name="__codelineno-0-340" href="#__codelineno-0-340"></a><span class="cm">    Step 2 [accounts CTE]: from test_loan_account, take the booked loans</span>
@@ -886,29 +886,29 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-343" name="__codelineno-0-343" href="#__codelineno-0-343"></a><span class="cm">      unmatched rows from both sides are kept. Exclude declined, withdrawn</span>
 <a id="__codelineno-0-344" name="__codelineno-0-344" href="#__codelineno-0-344"></a><span class="cm">      or pending applications that were never booked. Label each record, checking in</span>
 <a id="__codelineno-0-345" name="__codelineno-0-345" href="#__codelineno-0-345"></a><span class="cm">      this order:</span>
-<a id="__codelineno-0-346" name="__codelineno-0-346" href="#__codelineno-0-346"></a><span class="cm">        - 'Approved, not booked' if there's no booked loan</span>
-<a id="__codelineno-0-347" name="__codelineno-0-347" href="#__codelineno-0-347"></a><span class="cm">        - 'Booked, no approved application' if there's no application or</span>
-<a id="__codelineno-0-348" name="__codelineno-0-348" href="#__codelineno-0-348"></a><span class="cm">          it isn't 'Approved'</span>
-<a id="__codelineno-0-349" name="__codelineno-0-349" href="#__codelineno-0-349"></a><span class="cm">        - 'Amount mismatch' if the loan amounts differ</span>
-<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a><span class="cm">        - 'Timing difference' if the month of date_received differs from</span>
+<a id="__codelineno-0-346" name="__codelineno-0-346" href="#__codelineno-0-346"></a><span class="cm">        - &#39;Approved, not booked&#39; if there&#39;s no booked loan</span>
+<a id="__codelineno-0-347" name="__codelineno-0-347" href="#__codelineno-0-347"></a><span class="cm">        - &#39;Booked, no approved application&#39; if there&#39;s no application or</span>
+<a id="__codelineno-0-348" name="__codelineno-0-348" href="#__codelineno-0-348"></a><span class="cm">          it isn&#39;t &#39;Approved&#39;</span>
+<a id="__codelineno-0-349" name="__codelineno-0-349" href="#__codelineno-0-349"></a><span class="cm">        - &#39;Amount mismatch&#39; if the loan amounts differ</span>
+<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a><span class="cm">        - &#39;Timing difference&#39; if the month of date_received differs from</span>
 <a id="__codelineno-0-351" name="__codelineno-0-351" href="#__codelineno-0-351"></a><span class="cm">          the month of booked_date</span>
-<a id="__codelineno-0-352" name="__codelineno-0-352" href="#__codelineno-0-352"></a><span class="cm">        - otherwise 'Matched'</span>
+<a id="__codelineno-0-352" name="__codelineno-0-352" href="#__codelineno-0-352"></a><span class="cm">        - otherwise &#39;Matched&#39;</span>
 <a id="__codelineno-0-353" name="__codelineno-0-353" href="#__codelineno-0-353"></a><span class="cm">    Step 4 [final]: show every record with application_id, loan_account_id,</span>
 <a id="__codelineno-0-354" name="__codelineno-0-354" href="#__codelineno-0-354"></a><span class="cm">      both amounts, the difference, both dates and the label. Put the</span>
-<a id="__codelineno-0-355" name="__codelineno-0-355" href="#__codelineno-0-355"></a><span class="cm">      exceptions first."</span>
+<a id="__codelineno-0-355" name="__codelineno-0-355" href="#__codelineno-0-355"></a><span class="cm">      exceptions first.&quot;</span>
 <a id="__codelineno-0-356" name="__codelineno-0-356" href="#__codelineno-0-356"></a>
 <a id="__codelineno-0-357" name="__codelineno-0-357" href="#__codelineno-0-357"></a><span class="cm">   Tips:</span>
 <a id="__codelineno-0-358" name="__codelineno-0-358" href="#__codelineno-0-358"></a><span class="cm">   - Numbered steps give CoCo the same structure as the CTEs, and make its</span>
 <a id="__codelineno-0-359" name="__codelineno-0-359" href="#__codelineno-0-359"></a><span class="cm">     SQL easier to check.</span>
 <a id="__codelineno-0-360" name="__codelineno-0-360" href="#__codelineno-0-360"></a><span class="cm">   - Say the label order: like case when, the first true check wins.</span>
-<a id="__codelineno-0-361" name="__codelineno-0-361" href="#__codelineno-0-361"></a><span class="cm">   - Check you get 274 rows. If not, ask CoCo why. Usually it's a one-way join or the</span>
+<a id="__codelineno-0-361" name="__codelineno-0-361" href="#__codelineno-0-361"></a><span class="cm">   - Check you get 274 rows. If not, ask CoCo why. Usually it&#39;s a one-way join or the</span>
 <a id="__codelineno-0-362" name="__codelineno-0-362" href="#__codelineno-0-362"></a><span class="cm">     wrong label order.</span>
 <a id="__codelineno-0-363" name="__codelineno-0-363" href="#__codelineno-0-363"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-364" name="__codelineno-0-364" href="#__codelineno-0-364"></a>
 <a id="__codelineno-0-365" name="__codelineno-0-365" href="#__codelineno-0-365"></a>
 <a id="__codelineno-0-366" name="__codelineno-0-366" href="#__codelineno-0-366"></a><span class="cm">/* -----------------------------------------------------------------------------</span>
 <a id="__codelineno-0-367" name="__codelineno-0-367" href="#__codelineno-0-367"></a><span class="cm">   6b. The same logic, saved as a view</span>
-<a id="__codelineno-0-368" name="__codelineno-0-368" href="#__codelineno-0-368"></a><span class="cm">   We've already saved the query above as a view: v_loan_reconciliation.</span>
+<a id="__codelineno-0-368" name="__codelineno-0-368" href="#__codelineno-0-368"></a><span class="cm">   We&#39;ve already saved the query above as a view: v_loan_reconciliation.</span>
 <a id="__codelineno-0-369" name="__codelineno-0-369" href="#__codelineno-0-369"></a><span class="cm">   A view is a saved query with a name. Anyone can select from it without</span>
 <a id="__codelineno-0-370" name="__codelineno-0-370" href="#__codelineno-0-370"></a><span class="cm">   rewriting the logic, and it re-runs on the latest data every time.</span>
 <a id="__codelineno-0-371" name="__codelineno-0-371" href="#__codelineno-0-371"></a><span class="cm">   Excel: a recon template everyone reuses, instead of rebuilding it monthly.</span>
@@ -917,7 +917,7 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-374" name="__codelineno-0-374" href="#__codelineno-0-374"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-0-375" name="__codelineno-0-375" href="#__codelineno-0-375"></a><span class="k">from</span><span class="w"> </span><span class="n">v_loan_reconciliation</span>
 <a id="__codelineno-0-376" name="__codelineno-0-376" href="#__codelineno-0-376"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span>
-<a id="__codelineno-0-377" name="__codelineno-0-377" href="#__codelineno-0-377"></a><span class="w">    </span><span class="n">recon_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Matched'</span><span class="p">,</span>
+<a id="__codelineno-0-377" name="__codelineno-0-377" href="#__codelineno-0-377"></a><span class="w">    </span><span class="n">recon_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Matched&#39;</span><span class="p">,</span>
 <a id="__codelineno-0-378" name="__codelineno-0-378" href="#__codelineno-0-378"></a><span class="w">    </span><span class="n">recon_result</span><span class="p">,</span>
 <a id="__codelineno-0-379" name="__codelineno-0-379" href="#__codelineno-0-379"></a><span class="w">    </span><span class="n">application_id</span><span class="p">;</span>
 <a id="__codelineno-0-380" name="__codelineno-0-380" href="#__codelineno-0-380"></a>
@@ -925,10 +925,10 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-382" name="__codelineno-0-382" href="#__codelineno-0-382"></a><span class="c1">-- channel, account_status) so the results can be sliced further.</span>
 <a id="__codelineno-0-383" name="__codelineno-0-383" href="#__codelineno-0-383"></a>
 <a id="__codelineno-0-384" name="__codelineno-0-384" href="#__codelineno-0-384"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-385" name="__codelineno-0-385" href="#__codelineno-0-385"></a><span class="cm">   "Show every record in v_loan_reconciliation [from], exceptions first</span>
-<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a><span class="cm">    [order by]."</span>
+<a id="__codelineno-0-385" name="__codelineno-0-385" href="#__codelineno-0-385"></a><span class="cm">   &quot;Show every record in v_loan_reconciliation [from], exceptions first</span>
+<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a><span class="cm">    [order by].&quot;</span>
 <a id="__codelineno-0-387" name="__codelineno-0-387" href="#__codelineno-0-387"></a><span class="cm">   Tip: once logic lives in a view, the prompt gets much shorter. CoCo</span>
-<a id="__codelineno-0-388" name="__codelineno-0-388" href="#__codelineno-0-388"></a><span class="cm">   doesn't need the rules, just the name of the view.</span>
+<a id="__codelineno-0-388" name="__codelineno-0-388" href="#__codelineno-0-388"></a><span class="cm">   doesn&#39;t need the rules, just the name of the view.</span>
 <a id="__codelineno-0-389" name="__codelineno-0-389" href="#__codelineno-0-389"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 <a id="__codelineno-0-390" name="__codelineno-0-390" href="#__codelineno-0-390"></a>
 <a id="__codelineno-0-391" name="__codelineno-0-391" href="#__codelineno-0-391"></a>
@@ -957,13 +957,13 @@ Compare its answer to the one in the script.</p>
 <a id="__codelineno-0-414" name="__codelineno-0-414" href="#__codelineno-0-414"></a><span class="c1">-- which is why 6a/6b (the detail) comes first.</span>
 <a id="__codelineno-0-415" name="__codelineno-0-415" href="#__codelineno-0-415"></a>
 <a id="__codelineno-0-416" name="__codelineno-0-416" href="#__codelineno-0-416"></a><span class="cm">/* CoCo prompt ------------------------------------------------------------</span>
-<a id="__codelineno-0-417" name="__codelineno-0-417" href="#__codelineno-0-417"></a><span class="cm">   "Using v_loan_reconciliation [from], for each recon_result [group by]</span>
+<a id="__codelineno-0-417" name="__codelineno-0-417" href="#__codelineno-0-417"></a><span class="cm">   &quot;Using v_loan_reconciliation [from], for each recon_result [group by]</span>
 <a id="__codelineno-0-418" name="__codelineno-0-418" href="#__codelineno-0-418"></a><span class="cm">    show the number of records, total application_amount, total</span>
 <a id="__codelineno-0-419" name="__codelineno-0-419" href="#__codelineno-0-419"></a><span class="cm">    booked_amount and total amount_difference [select + aggregates], most</span>
-<a id="__codelineno-0-420" name="__codelineno-0-420" href="#__codelineno-0-420"></a><span class="cm">    records first [order by]."</span>
+<a id="__codelineno-0-420" name="__codelineno-0-420" href="#__codelineno-0-420"></a><span class="cm">    records first [order by].&quot;</span>
 <a id="__codelineno-0-421" name="__codelineno-0-421" href="#__codelineno-0-421"></a><span class="cm">   Follow-ups to try:</span>
-<a id="__codelineno-0-422" name="__codelineno-0-422" href="#__codelineno-0-422"></a><span class="cm">   - "Show the amount mismatches, biggest difference first."</span>
-<a id="__codelineno-0-423" name="__codelineno-0-423" href="#__codelineno-0-423"></a><span class="cm">   - "Break the exceptions down by product and region."</span>
+<a id="__codelineno-0-422" name="__codelineno-0-422" href="#__codelineno-0-422"></a><span class="cm">   - &quot;Show the amount mismatches, biggest difference first.&quot;</span>
+<a id="__codelineno-0-423" name="__codelineno-0-423" href="#__codelineno-0-423"></a><span class="cm">   - &quot;Break the exceptions down by product and region.&quot;</span>
 <a id="__codelineno-0-424" name="__codelineno-0-424" href="#__codelineno-0-424"></a><span class="cm">-------------------------------------------------------------------------- */</span>
 </code></pre></div>
 </details>
@@ -1058,10 +1058,10 @@ Compare its answer to the one in the script.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tabs.link", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
