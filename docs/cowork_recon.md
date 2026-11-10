@@ -53,10 +53,10 @@ Write a one-page month-end reconciliation sign-off summary for the finance manag
 Turn this conversation into a reusable skill called "Month-End Loan Reconciliation" that runs these same steps for any month or date range I give it.
 ```
 
-Then test it in a **new conversation**:
+Then test it in a **new conversation**. Type `/` and pick the skill, or paste this:
 
 ```text
-Run Month-End Loan Reconciliation for Q2 2026 only.
+/month-end-loan-reconciliation Run it for Q2 2026 only.
 ```
 
 !!! success "What you just built"
