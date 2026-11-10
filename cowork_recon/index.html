@@ -472,10 +472,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-find-the-biggest-risk" class="md-nav__link">
+  <a href="#3-build-the-follow-up-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Find the biggest risk
+        3. Build the follow-up list
       
     </span>
   </a>
@@ -483,21 +483,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-root-cause-on-mismatches" class="md-nav__link">
+  <a href="#4-sign-off-pack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Root cause on mismatches
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-sign-off-pack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Sign-off pack
+        4. Sign-off pack
       
     </span>
   </a>
@@ -568,8 +557,8 @@
 
 
 <h1 id="cowork-reconciliation-investigation">CoWork reconciliation investigation</h1>
-<p>Work through these five prompts <strong>in one conversation</strong> with the <strong>Loan Applications Analyst</strong> agent.
-They follow a month-end reconciliation: headline numbers, then where the exceptions are, then the biggest risk, then root cause, then a sign-off pack.
+<p>Work through these four prompts <strong>in one conversation</strong> with the <strong>Loan Applications Analyst</strong> agent.
+They follow a month-end reconciliation: headline numbers, then where the exceptions are, then a follow-up list, then a sign-off pack.
 At the end you turn the whole conversation into a reusable <strong>skill</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">How to use this page</p>
@@ -591,23 +580,19 @@ At the end you turn the whole conversation into a reusable <strong>skill</strong
 </code></pre></div>
 <p><strong>Look for:</strong> you never named a table or column. The agent works it out from the semantic view.
 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"/></svg></span> <strong>Save this chart as an artifact.</strong></p>
-<h2 id="3-find-the-biggest-risk">3. Find the biggest risk</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Which exception type carries the most dollar risk? List the approved-but-not-booked applications with their application ID, product, channel, approved amount and date received, sorted by amount, and give me the total.
+<h2 id="3-build-the-follow-up-list">3. Build the follow-up list</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Give me the top 10 individual exceptions by dollar value as a follow-up list: application ID, loan account ID, exception type, channel, application amount, booked amount, exception value, and a one-line suggested action for each (e.g. book the loan, correct the amount, find the missing application).
 </code></pre></div>
-<p><strong>Look for:</strong> a detail table you could export to Excel.</p>
-<h2 id="4-root-cause-on-mismatches">4. Root cause on mismatches</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>For the amount mismatches, show the application amount vs the booked amount and the difference for each one. Are there any that look like data entry errors rather than genuine variances? Also flag any data quality issues you notice in the application data.
-</code></pre></div>
-<p><strong>Look for:</strong> issues the agent flags that you didn't ask about.</p>
-<h2 id="5-sign-off-pack">5. Sign-off pack</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Write a one-page month-end reconciliation sign-off summary for the finance manager. Include headline numbers, the exception breakdown, the top 5 items by dollar value needing action, data quality issues, and recommended next steps with an owner for each exception type. Include one chart.
+<p><strong>Look for:</strong> a record-level worklist you could export to Excel, plus any data quality issues the agent spots without being asked.</p>
+<h2 id="4-sign-off-pack">4. Sign-off pack</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Write a one-page month-end reconciliation sign-off summary for the finance manager. Include headline numbers, the exception breakdown, the top 5 items from the follow-up list, any data quality issues, and recommended next steps with an owner for each exception type. Include one chart.
 </code></pre></div>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9H5V5h10m-3 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3m5-16H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7z"/></svg></span> <strong>Save it as an artifact</strong>, then open your saved artifacts to find all three.</p>
 <h2 id="bonus-turn-it-into-a-skill">Bonus: turn it into a skill</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Turn this conversation into a reusable skill called "Month-End Loan Reconciliation" that runs these same steps for any month or date range I give it.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Turn this conversation into a reusable skill called "Month-End Loan Reconciliation" that runs these same steps for any month or date range I give it.
 </code></pre></div>
 <p>Then test it in a <strong>new conversation</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Run Month-End Loan Reconciliation for Q2 2026 only.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Run Month-End Loan Reconciliation for Q2 2026 only.
 </code></pre></div>
 <div class="admonition success">
 <p class="admonition-title">What you just built</p>
