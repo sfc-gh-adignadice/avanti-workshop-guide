@@ -1,7 +1,7 @@
 # CoWork reconciliation investigation
 
-Work through these five prompts **in one conversation** with the **Loan Applications Analyst** agent.
-They follow a month-end reconciliation: headline numbers, then where the exceptions are, then the biggest risk, then root cause, then a sign-off pack.
+Work through these four prompts **in one conversation** with the **Loan Applications Analyst** agent.
+They follow a month-end reconciliation: headline numbers, then where the exceptions are, then a follow-up list, then a sign-off pack.
 At the end you turn the whole conversation into a reusable **skill**.
 
 !!! tip "How to use this page"
@@ -31,26 +31,18 @@ Break the exceptions (everything that isn't Matched) down by channel and by mont
 **Look for:** you never named a table or column. The agent works it out from the semantic view.
 :material-content-save: **Save this chart as an artifact.**
 
-## 3. Find the biggest risk
+## 3. Build the follow-up list
 
 ```text
-Which exception type carries the most dollar risk? List the approved-but-not-booked applications with their application ID, product, channel, approved amount and date received, sorted by amount, and give me the total.
+Give me the top 10 individual exceptions by dollar value as a follow-up list: application ID, loan account ID, exception type, channel, application amount, booked amount, exception value, and a one-line suggested action for each (e.g. book the loan, correct the amount, find the missing application).
 ```
 
-**Look for:** a detail table you could export to Excel.
+**Look for:** a record-level worklist you could export to Excel, plus any data quality issues the agent spots without being asked.
 
-## 4. Root cause on mismatches
-
-```text
-For the amount mismatches, show the application amount vs the booked amount and the difference for each one. Are there any that look like data entry errors rather than genuine variances? Also flag any data quality issues you notice in the application data.
-```
-
-**Look for:** issues the agent flags that you didn't ask about.
-
-## 5. Sign-off pack
+## 4. Sign-off pack
 
 ```text
-Write a one-page month-end reconciliation sign-off summary for the finance manager. Include headline numbers, the exception breakdown, the top 5 items by dollar value needing action, data quality issues, and recommended next steps with an owner for each exception type. Include one chart.
+Write a one-page month-end reconciliation sign-off summary for the finance manager. Include headline numbers, the exception breakdown, the top 5 items from the follow-up list, any data quality issues, and recommended next steps with an owner for each exception type. Include one chart.
 ```
 
 :material-content-save: **Save it as an artifact**, then open your saved artifacts to find all three.
